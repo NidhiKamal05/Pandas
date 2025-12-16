@@ -1,0 +1,20 @@
+
+## RENAME COLUMNS
+
+## 9.
+
+import pandas as pd
+
+def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
+    df =  students
+    df.columns = ['student_id', 'first_name', 'last_name', 'age_in_years']
+    return df
+	
+## OR
+
+import pandas as pd
+
+def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
+    df = students
+    df.rename(columns={'id':'student_id', 'first':'first_name', 'last':'last_name', 'age':'age_in_years'}, inplace=True)
+    return df

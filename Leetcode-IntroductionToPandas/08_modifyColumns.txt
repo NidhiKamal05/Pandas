@@ -1,0 +1,19 @@
+
+## MODIFY COLUMNS
+
+## 8.
+
+import pandas as pd
+
+def modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    df = employees
+    df['salary'] *= 2
+    return df
+	
+## OR
+
+import pandas as pd
+
+def modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    df = employees.assign(salary = 2*employees['salary'])
+    return df

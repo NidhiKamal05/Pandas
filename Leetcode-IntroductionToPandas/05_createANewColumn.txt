@@ -1,0 +1,12 @@
+
+## CREATE A NEW COLUMN
+
+## 5.
+
+import pandas as pd
+
+def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    df = employees
+    bonus = 2*df['salary']
+    df['bonus'] = bonus
+    return df
